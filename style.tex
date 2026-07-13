@@ -1,0 +1,45 @@
+% Packages for formatting 
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc} 
+\usepackage{lmodern} 
+\usepackage{geometry} 
+\geometry{margin=1in} 
+\usepackage{setspace} 
+\usepackage{hyperref} 
+\usepackage{xcolor}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{tcolorbox}
+\usepackage{tkz-euclide}
+\usetikzlibrary{calc,through}
+
+% Style settings
+\pagecolor{white}      % sets background color to black 
+\color{black}          % sets text color to white
+
+% Definiere eine Umgebung „aufgabenstellung“ mit starkem schwarzen Strich oben und unten
+\tcbuselibrary{skins}
+\tcbset {
+  base/.style={
+    arc=0mm, 
+    bottomtitle=0.5mm,
+    boxrule=0mm,
+    colbacktitle=black!10!white, 
+    coltitle=black, 
+    fonttitle=\bfseries, 
+    left=2.5mm,
+    leftrule=1mm,
+    right=3.5mm,
+    title={#1},
+    toptitle=0.75mm, 
+  }
+}
+
+\newtcolorbox{exercise}[1]{
+  colframe=black!30!white,
+  base={#1}
+}

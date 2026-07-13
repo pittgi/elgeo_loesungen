@@ -1,0 +1,69 @@
+\begin{exercise}{Übung 2.1}
+    Man zeige, dass die orthogonale Gruppe von $\mathbb Q^2$ mit seinem Standardskalarprodukt keine Drehspiegelgruppe ist.
+\end{exercise}
+Wir betrachten die zwei Strahlen $A = \mathbb Q_{\geq 0}(1,1)$ und $B = \mathbb Q_{\geq 0}(1,0)$.
+Laut Vorlesung muss es ein Element $g\in O(2, \mathbb Q)$ geben, sodass $g(A) = B$.
+
+Da $g$ das Skalarprodukt und damit die Norm erhält, muss gelten 
+\[
+2 = \left\|(1,1)\right\|^2 = \left\|g(1,1)\right\|^2 = \left\|\lambda(1,0)\right\|^2 = \lambda ^2 \quad \text{für ein} \quad \lambda \in \mathbb Q_{>0}.
+\]
+Aus der Gleichung folgt jedoch $\lambda=\sqrt{2}$. Damit ist $\lambda \notin \mathbb Q$ und haben wir einen Widerspruch. Somit gibt es kein Element aus $O(2, \mathbb Q)$ welches $A$ in $B$ überführt. Es folgt die Behauptung.
+
+\begin{exercise}{Übung 2.2}
+    Gegeben ein dreidimensionaler reeller Vektorraum $E$ erklären wir
+    eine \textbf{Halbraumfahne} $(A, H)$ als ein Paar von Teilmengen $A \subset H \subset E$, das
+    in der Gestalt $A = \mathbb R_{\geq 0}v$ und $H = \mathbb R v + \mathbb R_{\geq 0}w$ geschrieben werden kann mit
+    $v, w \in E$ linear unabhängigen Vektoren. Wir erklären eine \textbf{Rotationsgruppe auf}
+    $E$ als eine Untergruppe $R \subset \operatorname{GL}(E)$ derart, dass es zu je zwei Halbraumfahnen
+    genau ein Element $r \in R$ gibt, das die eine in die andere überführt.
+    \begin{enumerate}
+        \item Die Gruppe $\operatorname{SO}(3; \mathbb R)$ ist eine Rotationsgruppe auf $\mathbb R^3$;
+        \item Gegeben $v,w$ linear unabhängig und $r \in R$ mit
+    $
+        r\colon \bigl([v\rangle,\mathbb{R}v+[w\rangle\bigr)
+        =
+        \bigl([v\rangle,\mathbb{R}v-[w\rangle\bigr)
+    $
+    gilt $r^2=\operatorname{id}$ und $E^r=\mathbb{R}v$ und
+    $\dim E^{-r}=2$. Dieses Element hängt nur von $v$ ab und heiße ab
+    jetzt $a_v$ wie „Achsenspiegelung“.
+
+    \item Jedes $t \in \mathrm{GL}(E)$ hat einen reellen Eigenwert.
+    Ist $v$ ein zugehöriger Eigenvektor, so gilt
+    $a_vt=ta_v$ und damit stabilisiert $t$ die Ebene
+    $
+        Z=E^{-a_v}.
+    $
+
+    \item Gegeben ein zweidimensionaler Teilraum $Z \subset E$ und
+    $
+        R_Z := \{r \in R \mid r(Z)=Z\},
+    $
+    ist die Einschränkung
+    $
+        R_Z \longrightarrow \mathrm{GL}(Z)
+    $
+    ein injektiver Gruppenhomomorphismus und dessen Bild ist eine
+    Drehspiegelgruppe $D_Z$ auf $Z$;
+
+    \item Es gibt höchstens ein $R$-invariantes Skalarprodukt auf $E$,
+    bis auf Multiplikation mit Skalaren;
+
+    \item Jeder reelle Eigenwert eines Elements von $R$ ist $\pm 1$;
+
+    \item Es gibt ein $R$-invariantes Skalarprodukt $s$ auf $E$;
+
+    \item Es gilt
+    $
+        R=\mathrm{SO}(E,s).
+    $
+    \end{enumerate}
+\end{exercise}
+
+\begin{enumerate}
+    \setcounter{enumi}{3}
+    \item
+    \item
+    \item
+\end{enumerate}

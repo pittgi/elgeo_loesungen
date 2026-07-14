@@ -43,3 +43,8 @@
   colframe=black!30!white,
   base={#1}
 }
+
+\newcommand\invisiblesection[1]{%
+  \refstepcounter{section}%
+  \addcontentsline{toc}{section}{\protect\numberline{\textbullet}#1}%
+  \sectionmark{#1}}

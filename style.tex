@@ -34,14 +34,14 @@
     left=2.5mm,
     leftrule=1mm,
     right=3.5mm,
-    title={#1},
     toptitle=0.75mm, 
   }
 }
 
-\newtcolorbox{exercise}[1]{
+\newtcolorbox{exercise}[2]{
   colframe=black!30!white,
-  base={#1}
+  base,
+  title={#1\enspace\textmd{Wahrscheinlichkeit: #2}}
 }
 
 \newcommand\invisiblesection[1]{%

@@ -1,5 +1,20 @@
 \begin{exercise}{Übung 3.2}
     Gegeben Strahlenpaare $(A, B)$ und $(A', B')$ in Vektorräumen mit Drehspiegelgruppe $Z, Z'$ gibt es genau dann einen
-    drehspiegelverträglichen Isomorphismus $\psi : Z \tilde \rightarrow Z'$ mit $\psi(A) = A'$ und $\psi(B) = B'$, wenn gilt
+    drehspiegelverträglichen Isomorpsismus $\psi : Z \tilde \rightarrow Z'$ mit $\psi(A) = A'$ und $\psi(B) = B'$, wenn gilt
     \[\angle(A,B)=\angle(A',B').\]
 \end{exercise}
+
+$\Longrightarrow:$ Vorraussetzungen wie im Aufabentext. Seien $v \in A, w \in B$ ungleich Null. Dann gilt laut Übung 3.1 
+\begin{align*}
+    cos \angle(A',B') &= \frac{\langle \psi v, \psi w\rangle_{Z'}}{\langle \psi v\rangle_{Z'}\langle \psi w\rangle_{Z'}}\\
+    &= \frac{L_\psi^{\otimes 2}(\langle v, w\rangle_{Z})}{L_\psi(\left\| v\right\|_{Z})\cdot L_\psi(\left\| w\right\|_{Z})}\\
+    &= \frac{L_\psi^{\otimes 2}(\langle v, w\rangle_{Z})}{L_\psi^{\otimes 2}(\left\| v\right\|_{Z} \otimes \left\| w\right\|_{Z})}\\
+    &= \frac{\langle v, w\rangle_Z}{\left\| v\right\|_Z\left\| w\right\|_Z} \qquad \text{, da $L_\psi$ Skalierungsabbildung}\\
+    &= cos\angle (A,B).
+\end{align*}
+
+$\Longleftarrow:$ Vorraussetzungen wie im Aufgabentext. Wähle $a, b \in A$ ungleich null, sodass $a, b$ orthogonal stehen und gleiche Länge besitzen.
+Wähle $a', b' \in A'$ analog und mit gleicher Orientierung wie $a, b$.
+Sei $\psi$ eine Abbildung definiert durch $a \mapsto a'$, $b \mapsto b'$ und ihre lineare Fortsetzung.
+Konstruktionsbedingt erhält diese Abbildung die Skalarproduktstruktur zwischen $Z$ und $Z'$ bis auf einen globalen Skalierungsfaktor.
+Also ist $\psi$ ein drehspiegelverträglicher Isomorphismus. Da $\psi(A) = A'$ folgt $\psi(B) = B'$.

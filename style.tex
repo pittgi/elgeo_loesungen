@@ -42,10 +42,15 @@
 \newtcolorbox{exercise}[2]{
   colframe=black!30!white,
   base,
-  title={#1\enspace\textmd{Wahrscheinlichkeit: #2}}
+  title={\invisiblesubsection{#1}Übung #1\enspace\textmd{Wahrscheinlichkeit: #2}}
 }
 
 \newcommand\invisiblesection[1]{%
   \refstepcounter{section}%
   \addcontentsline{toc}{section}{\protect\numberline{\textbullet}#1}%
+  \sectionmark{#1}}
+
+  \newcommand\invisiblesubsection[1]{%
+  \refstepcounter{subsection}%
+  \addcontentsline{toc}{subsection}{\protect\numberline{}#1}%
   \sectionmark{#1}}

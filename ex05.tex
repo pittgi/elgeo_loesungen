@@ -1,0 +1,25 @@
+\begin{exercise}{5.1}{5}
+    Man betrachte die komplexe Zahlenebene als euklidische Ebene und
+    betrachte die Drehung $d$ mit Fixpunkt $p \in \mathbb C$ gegen den Uhrzeigersinn um den
+    rechten Winkel, in Formeln gegeben durch $d : p + z\mapsto p + iz$. Man schreibe für
+    einen beliebigen Richtungsvektor $w \in \mathbb C$ die Verknüpfung $(w+) \circ d$ wieder als
+    eine Drehung. Was ist der Fixpunkt dieser neuen Drehung?
+\end{exercise}
+
+Zunächst schreiben dir $d$ für einzelne $x \in \mathbb C$ um, indem wir substituieren mit $x = p + z$, also $z = x -p $:
+\[
+    d(x) = p+i(x-p) = p+ix -ip= ix +p(1-i).
+\]
+$(w+)$ meint die Verschiebung, bzw. Translation um den Vektor $w$, also $x \mapsto x +w$.
+Sei $d' = (w+) \circ d$, also ist 
+\[
+    d'(x) = ix + p(1-i) +w. 
+\]
+Um den neuen Fixpunkt $p'$ zu finden, lösen wir $ip'+p(1-i)+w=p'$:
+\begin{align*}
+    p' &= ip'+p(1-i)+w\\
+    \Leftrightarrow p' - ip' &= p(1-i)+w\\
+    \Leftrightarrow p'(1-i) &= p(1-i)+w\\
+    \Leftrightarrow p' &= \frac{p(1-i)+w}{1-i} = p + \frac{w}{1-i}\\
+    &= p + \frac{w(1+i)}{(1-i)(1+i)} = \boxed{p + \frac{1+i}{2}w}.
+\end{align*}

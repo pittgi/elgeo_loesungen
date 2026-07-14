@@ -18,3 +18,27 @@ Wähle $a', b' \in A'$ analog und mit gleicher Orientierung wie $a, b$.
 Sei $\psi$ eine Abbildung definiert durch $a \mapsto a'$, $b \mapsto b'$ und ihre lineare Fortsetzung.
 Konstruktionsbedingt erhält diese Abbildung die Skalarproduktstruktur zwischen $Z$ und $Z'$ bis auf einen globalen Skalierungsfaktor.
 Also ist $\psi$ ein drehspiegelverträglicher Isomorphismus. Da $\psi(A) = A'$ folgt $\psi(B) = B'$.
+
+\begin{exercise}{Übung 3.3}{4}
+    Man berechne den Arcuscosinus des Winkels, den zwei Flächen eines
+    Tetraeders längs einer Kante einschlie\ss en. Der Winkel von Flächen ist dabei wie
+    in der Schule erklärt als der kleinstmögliche absolute Winkel zwischen darauf
+    senkrechten Strahlen.
+\end{exercise}
+
+Das Tetraeder in $\mathbb R^3$ eingebettet sei gegeben durch seine Ecken
+\[
+V_1 = (1,1,1), \quad V_2 = (-1,-1,1), \quad V_3 = (-1, 1, -1) \quad \text{und} \quad V_4 = (1, -1, -1).
+\]
+Bestimme die normierten Normalvektoren der Flächen $(V_1, V_2, V_3)$ und $(V_1, V_2, V_4)$:
+\begin{align*}
+    v_{12}=V_2 - V_1= (-2,-2-0)&, \quad v_{13}=V_3 -V_1 = (-2, 0, -2)\\
+    v_{12}\times v_{13}= (4, -4, -4),& \quad \text{normiert} \quad n_1 = \frac{1}{\sqrt{3}}(1, -1, -1)  \quad \text{und}\\
+    v_{14}=(0, -2, -2), \quad v_{14}\times v_{12} &= (-4, 4, -4), \quad \text{normiert} \quad n_2 = \frac{1}{\sqrt{3}}(1, -1, 1)
+\end{align*}
+Der Winkel zwischen den beiden Flächen ist gleich dem Winkel zwischen
+ihren Normalenvektoren $n_1$ und $n_2$. Da wir normierte Vektoren haben, rechnen wir:
+\[
+\operatorname{cos} \theta = \frac{\langle n_1, n_2\rangle}{\left\|n_1\right\|\cdot \left\|n_2\right\|}=\frac{1}{3}\langle (1, -1, -1), (1, -1, 1)\rangle=\frac{1}{3} \quad \Longrightarrow \quad \boxed{\theta = \operatorname{arccos}\frac{1}{3}}
+\]
+

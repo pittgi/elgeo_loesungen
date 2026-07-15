@@ -31,23 +31,19 @@ Prioritätenliste für kommende Übungsaufgaben:
     \item 7.2
     \item ...
 \end{enumerate}
-\newpage
-\invisiblesection{Übung 1}
-\input{ex01.tex}
-\newpage
-\invisiblesection{Übung 2}
-\input{ex02.tex}
-\newpage
-\invisiblesection{Übung 3}
-\input{ex03.tex}
-\newpage
-\invisiblesection{Übung 5}
-\input{ex05.tex}
-\newpage
-\invisiblesection{Übung 6}
-\input{ex06.tex}
-\newpage
-\invisiblesection{Übung 8}
-\input{ex08.tex}
+
+\foreach \i in {1,...,10} {
+    \ifnum\i<10
+        \edef\exfile{ex0\i.tex}
+    \else
+        \edef\exfile{ex\i.tex}
+    \fi
+
+    \IfFileExists{\exfile}{
+        \newpage
+        \invisiblesection{Übung \i}
+        \input{\exfile}
+    }{}
+}
 
 \end{document} 

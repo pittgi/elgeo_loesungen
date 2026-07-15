@@ -1,0 +1,165 @@
+\begin{exercise}{4.1}{4}
+    Man zeige den \textbf{Cosinus-Satz} $a^2 + b^2 - 2ab \operatorname{cos} \gamma = c^2$
+    für jedes Dreieck einer Kongruenzebene mit positiven Seitenlängen $a, b, c$ und jeweils den entsprechenden Seiten gegenüberliegenden Winkeln $\alpha, \beta, \gamma$.
+    Man zeige in denselben Notationen auch den \textbf{Sinus-Satz}
+    \[
+        \frac{\operatorname{sin}\alpha}{a} = \frac{\operatorname{sin}\beta}{b} = \frac{\operatorname{sin}\gamma}{c}.
+    \]
+    Hinweis: Man wähle eine Seite als horizontale Seite aus und berechne die Höhe
+    unseres Dreiecks auf verschiedene Weisen.
+\end{exercise}
+
+\begin{minipage}{0.7\linewidth}
+Seien $A, B, C$ ein Dreieck bildende Punkte auf einer Konkgruenzebene, sodass 
+$|BC| = a, \quad |CA| = b, \quad |AB| = c$.
+O.b.d.A. legen wir $ C = (0, 0)$ und $B = (a,0)$.
+Da $|CA| = b$ und $\gamma$ bei $C$ liegt, ist
+$ A = (b \operatorname{cos} \gamma, b \operatorname{sin} \gamma)$.
+Sei $D$ der Lotfuss von $A$ auf die Gerade $CB$.
+Dann ist $AD\perp CB$, also sind die Dreiecke $ACD$ und $ABD$ rechtwinklig und es gilt:
+\[
+|CD| = b \operatorname{cos} \gamma, \quad |AD| = b \operatorname{sin} \gamma, \quad \text{und} \quad |BD| = a - b \operatorname{cos} \gamma.\]
+Da $ABD$ rechtwinklig ist, folgt aus dem Satz des Pythagoras:
+\begin{align*}
+c^2 = |AB|^2 &= |AD|^2 + |BD|^2\\
+&= (b \operatorname{sin} \gamma)^2 + (a - b \operatorname{cos} \gamma)^2\\
+&= b^2 \operatorname{sin}^2 \gamma + a^2 - 2ab \operatorname{cos} \gamma + b^2 cos^2 \gamma \\
+&= a^2 -2ab \operatorname{cos} \gamma + b^2(\operatorname{sin}^2 \gamma + \operatorname{cos}^2 \gamma)\\
+&= a^2 + b^2 -2ab \operatorname{cos} \gamma
+\end{align*}
+Sei nun $h=|CE|$ die Höhe auf der Seite $c$ mit $E$ als Lotfu\ss \space von $C$ zu $c$. Dann kann $h$ im Dreieck $ACE$ und $BCE$ berechnet werden. Also gilt:
+\[h=b\operatorname{sin}\alpha \qquad \text{und} \qquad h=a\operatorname{sin}\beta.\]
+\end{minipage}
+\begin{minipage}{0.3\linewidth}
+    \begin{center}
+        \begin{tikzpicture}[
+        scale=1,
+        point/.style={circle, fill, inner sep=1.5pt}
+    ]
+
+    % Punkte
+    \coordinate (C) at (0,0);
+    \coordinate (B) at (3,0);
+    \coordinate (A) at (1.5,2.25);
+    \coordinate (D) at (1.5,0);
+    \coordinate (E) at (2.25,1.125);
+
+    % Dreieck
+    \draw[thick]
+        (B) -- node[below] {$a$}
+        (C) -- node[left, sloped, above] {$b$}
+        (A) -- node[right, sloped, above] {$c$}
+        cycle;
+
+    % Lotfuß
+    \draw[thick, red!40] (A) -- node[midway, right, text=red!40] {$h'$} (D);
+    \draw[thick, green!40] (C) -- node[midway, above, text=green] {$h$} (E);
+
+    % Punkte markieren
+    \node[point, label=below left:$C$] at (C) {};
+    \node[point, label=below right:$B$] at (B) {};
+    \node[point, label=above:$A$] at (A) {};
+    \fill[red!40] (D) circle (1.5pt) node[above right, text=red!40] {$D$};
+    \fill[green] (E) circle (1.5pt) node[below, text=green] {$E$};
+
+    % Winkel gamma bei C
+    \pic[
+        draw,
+        angle radius=3mm,
+        angle eccentricity=1.4,
+        pic text={$\gamma$}
+    ] {angle=B--C--A};
+
+    % Winkel beta bei B
+    \pic[
+        draw,
+        angle radius=3mm,
+        angle eccentricity=1.4,
+        pic text={$\beta$}
+    ] {angle=A--B--C};
+
+    % Winkel alpha bei A
+    \pic[
+        draw,
+        angle radius=3mm,
+        angle eccentricity=1.4,
+        pic text={$\alpha$}
+    ] {angle=C--A--B};
+
+    \pic[
+        draw,
+        angle radius=2mm,
+        angle eccentricity=0.5,
+        pic text={\fontsize{3}{3}\selectfont$\bullet$}
+    ] {angle=A--D--C};
+
+    \pic[
+        draw,
+        angle radius=2mm,
+        angle eccentricity=0.5,
+        pic text={\fontsize{3}{3}\selectfont$\bullet$}
+    ] {angle=A--E--C};
+            
+    \end{tikzpicture}
+    %%%% NEXT %%%%
+    \textit{Reminder:}
+    \begin{tikzpicture}[
+    scale=1,
+    point/.style={circle, fill, inner sep=1.5pt}
+    ]
+
+    % Punkte
+    \coordinate (C) at (0,0);
+    \coordinate (B) at (3,0);
+    \coordinate (A) at (3,2);
+
+    % Dreieck
+    \draw[thick]
+        (B) -- node[below] {$a$}
+        (C) -- node[left, sloped, above] {$c$}
+        (A) -- node[right, sloped, above] {$b$}
+        cycle;
+
+    % Winkel gamma bei C
+    \pic[
+        draw,
+        angle radius=5mm,
+        angle eccentricity=1.4,
+        pic text={$\alpha$}
+    ] {angle=B--C--A};
+
+    % Winkel beta bei B
+    \pic[
+        draw,
+        angle radius=3mm,
+        angle eccentricity=0.5,
+        pic text={\fontsize{3}{3}\selectfont$\bullet$}
+    ] {angle=A--B--C};
+
+    % Winkel alpha bei A
+    \pic[
+        draw,
+        angle radius=4mm,
+        angle eccentricity=1.7,
+        pic text={$\beta$}
+    ] {angle=C--A--B};
+
+    \end{tikzpicture}
+    \fcolorbox{gray}{white}{
+        $\displaystyle
+        \begin{aligned}
+            \sin \alpha &= \cos \beta = \frac{b}{c}\\
+            \cos \alpha &= \sin \beta = \frac{a}{c}\\
+            \tan \alpha &= \cot \beta = \frac{b}{a}
+        \end{aligned}
+        $
+    }
+    \end{center}
+\end{minipage}
+Also ist
+\[ \frac{\operatorname{sin}\alpha}{a} = \frac{\operatorname{sin}\beta}{b}.\]
+Betrachtet man analog nun die Höhe $h'$ auf der Seite $a$, dann kann $h'$ im Dreieck $ACD$ und $ABD$ berechnet werden. Also gilt:
+\[h' = c \operatorname{sin}\beta = b \operatorname{sin}\gamma\]
+Also folgt
+\[ \frac{\operatorname{sin}\beta}{b} = \frac{\operatorname{sin}\gamma}{c}.\]
+

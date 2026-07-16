@@ -42,3 +42,53 @@ Damit ist das Bild des Einheitskreises die erweiterte Gerade
 \boxed{\{\,w\in\mathbb C\mid \operatorname{Im}(w)=-1\,\} 
 \sqcup \{\infty\}.}
 \]
+
+\newpage
+\begin{exercise}{6.3}{4}
+    Wir betrachten den Einheitskreis $S^1$ in der Ebene $\mathbb R^2$ und stellen darauf bei $p := (0, 1)$ eine Lampe.
+    Wir betrachten die Gerade $H$ in $\mathbb R^2$ mit der Gleichung $y = -1$ und die Abbildung $S:S^1\setminus p \rightarrow H$, die jedem Punkt seinen Schatten auf $H$ zuordnet.
+    Zeigen Sie, dass diese Abbildung die Einschränkung einer Kreisspiegelung ist.
+\end{exercise}
+
+Betrachte die Isomorphie zwischen $\mathbb R^2 \rightarrow \mathbb C$ mit $(x,y) \mapsto x + iy$.
+Dann gilt $p = i$ und $H = \{z \in \mathbb C |  \operatorname{Im}(z)=-1\}$.
+Erinnere an den Kreis aus Übung 6.1 mit Zentrum $p=i$ und Radius $2$:
+\[
+    s(z) = i+\frac{4}{\overline{z-i}}.
+\]
+Aus 6.1 wissen wir $s(S^1\setminus\{p\}) = H$.
+
+Es muss nur gezeigt werden, dass die Abbildungsvorschriften von $s$ und $S$ übereinstimmen.
+Für \(z\in S^1\setminus\{p\}\) gilt
+\[
+    s(z)-i
+    =
+    \frac{4}{\overline{z-i}}.
+\]
+Setze
+\[
+    \lambda_z:=\frac{4}{|z-i|^2}>0.
+\]
+Dann gilt
+\[
+    \lambda_z(z-i)
+    =
+    \frac{4(z-i)}{|z-i|^2}
+    =
+    \frac{4}{\overline{z-i}}
+    =
+    s(z)-i.
+\]
+Also ist
+\[
+    s(z)=i+\lambda_z(z-i),
+\]
+und somit liegen \(i\), \(z\) und \(s(z)\) auf demselben von \(i\)
+ausgehenden Strahl. Nach Übung 6.1 gilt au\ss erdem \(s(z)\in H\).
+Da dieser Strahl die Gerade \(H\) in genau einem Punkt schneidet,
+ist
+\[
+    s(z)=S(z).
+\]
+Folglich ist \(S\) die Einschränkung der Kreisspiegelung \(s\) auf
+\(S^1\setminus\{p\}\).

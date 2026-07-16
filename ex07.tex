@@ -1,0 +1,21 @@
+\begin{exercise}{7.2}{4}
+    Gegeben ein verallgemeinerter Kreis $M$ und zwei Punkte $p, q$ gibt es
+    stets einen verallgemeinerten Kreis $L$, der durch unsere beiden Punkte geht und
+    auf $M$ senkrecht steht. Unter der Annahme $p \notin {q, s_M(q)}$ ist L eindeutig bestimmt
+\end{exercise}
+
+\textit{Hinweis:} Diese Lösung ist sehr an Soergels Lösung angelehnt, die allgemein ja immer etwas flapsiger sind. Eine detailliertere Lösung wäre gut.
+\bigskip
+
+Möbistransformationen sind transitiv auf verallgemeinerten Kreisen und erhalten Orthogonalität. Daher sei o.B.d.A $M = \hat{g}$ eine erweiterte Gerade.
+Fallunterscheidungen:
+\begin{enumerate}
+    \item $p=q$: Offensichtlich gibt es unendlich viele Lösungen.
+    \item $p \neq q$ und $p,q \neq \infty$: Betrachte die Mittelsenkrechte $h$ auf der Strecke $[p,q]$.
+    \begin{enumerate}
+        \item $h$ nicht parallel oder gleich $g$, gibt es einen Schnittpunkt $c$ mit $g$. Der Kreis $L$ durch $p$ mit Zentrum $c$ geht auch durch $q$ und steht senkrecht auf $M$. Diese Lösung ist eindeutig.
+        \item Ist $h=g$, so kann $L$ genau so konstruiert werden. Es ist jedoch keine eindeutige Lösung.
+        \item Ist $h$ parallel zu $g$, so steht die affine Gerade $\ell$, welche durch $p$ und $q$ geht, senkrecht auf $g$. Durch die Erweiterung mit $\infty$ zu $\widehat{\ell}$ erhalten wir $L$ als eindeutige Lösung.
+    \end{enumerate}
+    \item $p=\infty$ oder $q=\infty$: Sei o.B.d.A. $p = \infty$. Nehme als $\ell$ die zu $p$ senkrechte Gerade und erweitere sie mit $\infty$, um $\hat{\ell} =: L$ zu erhalten. Diese Lösung ist eindeutig.
+\end{enumerate}

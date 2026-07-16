@@ -20,3 +20,28 @@ Um den neuen Fixpunkt $p'$ zu finden, lösen wir $ip'+p(1-i)+w=p'$:
     \Leftrightarrow p' &= \frac{p(1-i)+w}{1-i} = p + \frac{w}{1-i}\\
     &= p + \frac{w(1+i)}{(1-i)(1+i)} = \boxed{p + \frac{1+i}{2}w}.
 \end{align*}
+
+\newpage
+\begin{exercise}{5.3}{4}
+    (\textbf{Dreispiegelungssatz}). Man zeige, dass sich jedes Element der Kongruenzgruppe einer euklidischen Ebene als Verknüpfung von einer, zwei oder drei
+    Spiegelungen darstellen lässt.
+\end{exercise}
+
+\begin{minipage}{0.5\linewidth}
+    Sei $f$ eine Isometrie (Kongruenz) einer euklidischen Ebene. Eine Isometrie wird eindeutig durch die Abbildung dreier nicht-kollinearen Punkte bestimmt.
+    Seien also $A, B, C$ nicht-kollineare Punkte und $A' = f(A), B' = f(B'),$ und $C' = f(C')$ deren Bilder. Wir stellen nun $f$ als Verkettung dreier Spiegelungen dar:
+    \begin{enumerate}
+        \item Wenn $A \neq A'$, sei $\sigma_1$ die Reflektion an der Mittelsenkrechten von $AA'$. Wenn $A = A'$, sei $\sigma_1 = \operatorname{id}$. Also ist $\sigma_1(A) = A'$.
+        \item Schreibe $B_1 := \sigma_1(B)$. Da Isometrien Abstände erhalten, gilt $A'B_1$ = $AB$ = $A'B'$. Somit liegt $A'$ auf der Mittelsenkrechten von $B'B_1$. Wenn $B_1 \neq B'$, dann sei $\sigma_2$ die Spiegelung an jener Mittelsenkrechte. Sonst sei $\sigma_2 = \operatorname{id}$. Somit gilt $\sigma_2(B_1) = B', \sigma_2(A') = A'$ und $(\sigma_2 \circ \sigma_1)$ bildet $A \mapsto A', B \mapsto B'$ ab. 
+        \item Schreibe $C_2 := (\sigma_2 \circ \sigma_1)C$. Es gilt $A'C_2 = A'C'$ und $B'C_2 = B'C'$. Wenn $C_2 \neq C'$, ist $A'B'$ somit die Mittelsenkrechte von $C_2C'$. Analog zu vorher finden wir somit ein $\sigma_3$, welches $A'$, $B'$ fixiert und $\sigma_3(C_2) = C'$.
+    \end{enumerate}
+    Somit lässt sich $f$ schreiben als $\sigma_3 \circ \sigma_2 \circ \sigma_1$.
+\end{minipage}
+\begin{minipage}{0.49\linewidth}
+    \begin{center}
+        \fcolorbox{black}{white}{\input{tikz/531.tex}}
+        \fcolorbox{black}{white}{\input{tikz/532.tex}}
+        \fcolorbox{black}{white}{\input{tikz/533.tex}}
+    \end{center}
+\end{minipage}
+

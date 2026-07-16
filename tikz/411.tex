@@ -1,0 +1,70 @@
+\begin{center}
+        \begin{tikzpicture}[
+        scale=1,
+        point/.style={circle, fill, inner sep=1.5pt}
+    ]
+
+    % Punkte
+    \coordinate (C) at (0,0);
+    \coordinate (B) at (3,0);
+    \coordinate (A) at (1.5,2.25);
+    \coordinate (D) at (1.5,0);
+    \coordinate (E) at (2.25,1.125);
+
+    % Dreieck
+    \draw[thick]
+        (B) -- node[below] {$a$}
+        (C) -- node[left, sloped, above] {$b$}
+        (A) -- node[right, sloped, above] {$c$}
+        cycle;
+
+    % Lotfuß
+    \draw[thick, red!40] (A) -- node[midway, right, text=red!40] {$h'$} (D);
+    \draw[thick, green!40] (C) -- node[midway, above, text=green] {$h$} (E);
+
+    % Punkte markieren
+    \node[point, label=below left:$C$] at (C) {};
+    \node[point, label=below right:$B$] at (B) {};
+    \node[point, label=above:$A$] at (A) {};
+    \fill[red!40] (D) circle (1.5pt) node[above right, text=red!40] {$D$};
+    \fill[green] (E) circle (1.5pt) node[below, text=green] {$E$};
+
+    % Winkel gamma bei C
+    \pic[
+        draw,
+        angle radius=3mm,
+        angle eccentricity=1.4,
+        pic text={$\gamma$}
+    ] {angle=B--C--A};
+
+    % Winkel beta bei B
+    \pic[
+        draw,
+        angle radius=3mm,
+        angle eccentricity=1.4,
+        pic text={$\beta$}
+    ] {angle=A--B--C};
+
+    % Winkel alpha bei A
+    \pic[
+        draw,
+        angle radius=3mm,
+        angle eccentricity=1.4,
+        pic text={$\alpha$}
+    ] {angle=C--A--B};
+
+    \pic[
+        draw,
+        angle radius=2mm,
+        angle eccentricity=0.5,
+        pic text={\fontsize{3}{3}\selectfont$\bullet$}
+    ] {angle=A--D--C};
+
+    \pic[
+        draw,
+        angle radius=2mm,
+        angle eccentricity=0.5,
+        pic text={\fontsize{3}{3}\selectfont$\bullet$}
+    ] {angle=A--E--C};
+            
+    \end{tikzpicture}

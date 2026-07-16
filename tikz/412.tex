@@ -1,0 +1,42 @@
+\begin{tikzpicture}[
+    scale=1,
+    point/.style={circle, fill, inner sep=1.5pt}
+    ]
+
+    % Punkte
+    \coordinate (C) at (0,0);
+    \coordinate (B) at (3,0);
+    \coordinate (A) at (3,2);
+
+    % Dreieck
+    \draw[thick]
+        (B) -- node[below] {$a$}
+        (C) -- node[left, sloped, above] {$c$}
+        (A) -- node[right, sloped, above] {$b$}
+        cycle;
+
+    % Winkel gamma bei C
+    \pic[
+        draw,
+        angle radius=5mm,
+        angle eccentricity=1.4,
+        pic text={$\alpha$}
+    ] {angle=B--C--A};
+
+    % Winkel beta bei B
+    \pic[
+        draw,
+        angle radius=3mm,
+        angle eccentricity=0.5,
+        pic text={\fontsize{3}{3}\selectfont$\bullet$}
+    ] {angle=A--B--C};
+
+    % Winkel alpha bei A
+    \pic[
+        draw,
+        angle radius=4mm,
+        angle eccentricity=1.7,
+        pic text={$\beta$}
+    ] {angle=C--A--B};
+
+    \end{tikzpicture}

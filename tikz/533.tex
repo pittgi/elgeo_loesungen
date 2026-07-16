@@ -1,0 +1,52 @@
+\begin{tikzpicture}[
+        scale=1,
+        point/.style={circle, fill, inner sep=1.5pt}
+    ]
+
+    % Punkte
+    \coordinate (C) at (0,-0.2);
+    \coordinate (B) at (1,1);
+    \coordinate (A) at (1,-1);
+
+    \coordinate (C') at (4,2.8);
+    \coordinate (B') at (3,4);
+    \coordinate (A') at (3,2);
+
+    \coordinate (M) at (2,0.5);
+    \coordinate (M2) at ({27/13},{34/13});
+
+    \coordinate (B1) at ({15/13},{16/13});
+    \coordinate (C1) at ({122/65},{34/13});
+    \coordinate (C2) at (2, 2.8);
+
+    % Dreiecke
+    \draw[thick, black!30] (B) -- (C) -- (A) -- cycle;
+    \draw[thick, black!30] (B') -- (C') -- (A') -- cycle;
+
+    % Sigma_3
+    \draw[thick, purple, -{Stealth}] (C2) -- (C');
+    \draw[dashed, purple] ($(3, 5)$) -- ($(3,1)$);
+    \node[label=below:\textcolor{purple}{$\sigma_3$}] at ($(3,1.2)$) {}; 
+    \draw[dashed, thick, red!20]
+    (-1,2.5) -- (5,-1.5)
+
+    % Sigma_1
+    node[below right] {$\sigma_1$};
+    \draw[dashed, thick, blue!30]
+
+    % Sigma_2
+    ($(M2)-0.95*(3,-2)$) -- ($(M2)+0.95*(3,-2)$)
+    node[right] {$\sigma_2$};
+
+    % Punkte markieren
+    \node[point, label=below left:$C$] at (C) {};
+    \node[point, label=left:$B$] at (B) {};
+    \node[point, label=below:$A$] at (A) {};
+    \node[point, label=right:$C'$] at (C') {};
+    \node[point, label=left:$B'$] at (B') {};
+    \node[point, label=below right:$A'$] at (A') {};
+
+    \node[point, label=below left:$C_1$] at (C1) {};
+    \node[point, label=above right:$C_2$] at (C2) {};
+    
+\end{tikzpicture}

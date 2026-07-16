@@ -26,29 +26,8 @@ Also ist $\psi$ ein drehspiegelverträglicher Isomorphismus. Da $\psi(A) = A'$ f
     senkrechten Strahlen.
 \end{exercise}
 
-\begin{minipage}{0.5\linewidth}
-\tdplotsetmaincoords{30}{10}
-
-\begin{tikzpicture}[tdplot_main_coords, scale=2]
-
-    \coordinate (V1) at (1,1,1);
-    \coordinate (V2) at (-1,-1,1);
-    \coordinate (V3) at (-1,1,-1);
-    \coordinate (V4) at (1,-1,-1);
-
-    % Flächen
-    \filldraw[fill=blue!10, draw=black, opacity=0.7] (V1) -- (V2) -- (V3) -- cycle;
-    \filldraw[fill=red!10, draw=black, opacity=0.7]  (V1) -- (V2) -- (V4) -- cycle;
-    \filldraw[fill=green!10, draw=black, opacity=0.7] (V1) -- (V3) -- (V4) -- cycle;
-    \filldraw[fill=yellow!15, draw=black, opacity=0.7] (V2) -- (V3) -- (V4) -- cycle;
-
-    % Punkte
-    \fill (V1) circle (0.8pt) node[above right] {$V_1$};
-    \fill (V2) circle (0.8pt) node[below left] {$V_2$};
-    \fill (V3) circle (0.8pt) node[above left] {$V_3$};
-    \fill (V4) circle (0.8pt) node[below right] {$V_4$};
-
-\end{tikzpicture}
+\begin{minipage}{0.49\linewidth}
+    \input{tikz/331.tex}
 \end{minipage}
 \begin{minipage}{0.5\linewidth}
 Das Tetraeder in $\mathbb R^3$ eingebettet sei gegeben durch seine Ecken

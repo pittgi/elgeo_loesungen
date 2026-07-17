@@ -154,3 +154,78 @@ Somit sind die gesuchten Matrizen genau
     \right\}.
     }
 \]
+
+\newpage
+\begin{exercise}{10.4}{?}
+    Was ist die Bahn des Punkte \(2i \in \mathbb H\) unter der Gruppe aller Kongruenzen der oberen Halbebene, die den Punkt \(i\) festhalten?    
+\end{exercise}
+
+Gegeben die Matrix mit zugehöriger Möbiustransformation
+\[
+    A=
+    \begin{pmatrix}
+        a & b\\
+        c & d
+    \end{pmatrix}
+    \in \operatorname{SL}(2,\mathbb R), \qquad
+    f_A(z)=\frac{az+b}{cz+d}.
+\]
+Da \(i\) festgehalten werden soll, gilt
+\[
+    f_A(i)
+    =
+    \frac{ai+b}{ci+d}
+    =
+    i.
+\]
+Daraus folgt
+\begin{align*}
+    ai+b
+    &=i(ci+d)\\
+    &=di-c.
+\end{align*}
+Durch Vergleich von Real- und Imaginärteil erhalten wir
+\(b=-c\) und \(a=d\).
+Somit hat \(A\) die Form
+\[
+    A=
+    \begin{pmatrix}
+        a & b\\
+        -b & a
+    \end{pmatrix}.
+\]
+Aus \(\det(A)=1\) folgt \(a^2+b^2=1\).
+
+Nun bestimmen wir die Bahn von \(2i\). Es gilt
+\begin{align*}
+    f_A(2i)
+    &=
+    \frac{2ai+b}{-2bi+a}\\
+    &=
+    \frac{(2ai+b)(2bi+a)}
+         {(-2bi+a)(2bi+a)}\\
+    &=
+    \frac{-4ab+2a^2i+2b^2i+ab}
+         {a^2+4b^2}\\
+    &=
+    \frac{-3ab+2(a^2+b^2)i}
+         {a^2+4b^2}\\
+    &=
+    -\frac{3ab}{a^2+4b^2}
+    +
+    \frac{2}{a^2+4b^2}i \quad \text{mit} \quad a^2+b^2=1.
+\end{align*}
+Somit ist
+\[
+    \boxed{\operatorname{Bahn}(2i) = \Bigl\{
+        -\frac{3ab}{a^2+4b^2}
+        +
+        \frac{2}{a^2+4b^2}i \mid a^2+b^2=1\Bigr\}.}
+\]
+\textit{Hinweis:} Mit wilden Substitutionen und Trickst kommt man auf die gleiche Lösung
+in schönerer Schreibweise:
+\[
+    x^2+(y-\frac{5}{4})^2 = \frac{3}{4}.
+\]
+Dies ist der euklidische Kreis mit Mittelpunkt $\frac{5}{4}i$ und Radius $\frac{3}{4}$.
+Ich halte diese Rechenwege für zu wild in einer Klausur und bin zu faul sie auf zu schreiben.

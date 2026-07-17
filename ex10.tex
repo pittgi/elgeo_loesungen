@@ -90,3 +90,67 @@ Nach Satz 2.5.9 sind die gesuchten Matrizen daher genau
         \end{pmatrix}.
     }
 \]
+
+\begin{exercise}{10.3}{?}
+    Welche Matrizen von $\operatorname{SL}(2; \mathbb R)$ liefern Kongruenzen
+    der oberen Halbebene, die die Gerade $\{z \mid |z| = 1, \operatorname{Im}(z) > 0\}$ stabilisieren?
+\end{exercise}
+
+Seien \(A\) und \(f_A\) wie in 10.2. \(f_A\) stabilisiert die Gerade, wenn \(\{f_A(1), f_A(-1)\} = \{1, -1\}\).
+Daher betrachten wir die zwei Fälle
+\begin{enumerate}
+    \item Sei \(f_A(1)=1\) und \(f_A(-1)=-1\). Es folgt
+    \[
+        (\text{I}) \qquad f_A(1) = \frac{a+b}{c+d} = 1 \quad \Longrightarrow \quad a+b = c+d \quad \text{und}
+    \]
+    \[
+        (\text{II}) \qquad f_A(-1) = \frac{-a+b}{-c+d} = -1 \quad \Longrightarrow \quad a-b = -c+d.
+    \]
+    Daraus folgt (I+II) \(a=d\) und (I-II) \(b=c\).
+    Also hat \(A\) die Form
+    \[
+        A= \begin{pmatrix}
+            a & b\\
+            b & a
+        \end{pmatrix} \in \operatorname{SL}(2;\mathbb R)
+    \]
+    und \(a^2-b^2 = 1\), da \(\det(A) = 1\).
+    \item Sei \(f_A(1)=-1\) und \(f_A(-1)=1\). Es folgt
+    \[
+        (\text{I}) \qquad f_A(1) = \frac{a+b}{c+d} = -1 \quad \Longrightarrow \quad -a-b = c+d \quad \text{und}
+    \]
+    \[
+        (\text{II}) \qquad f_A(-1) = \frac{-a+b}{-c+d} = 1 \quad \Longrightarrow \quad -a+b = -c+d.
+    \]
+    Daraus folgt (I+II) \(a=-d\) und (I-II) \(b=-c\).
+    Also hat \(A\) die Form
+    \[
+        A= \begin{pmatrix}
+            a & b\\
+            -b & -a
+        \end{pmatrix} \in \operatorname{SL}(2;\mathbb R)
+    \]
+    und \(b^2-a^2 = 1\), da \(\det(A) = 1\).
+    \end{enumerate}
+Somit sind die gesuchten Matrizen genau
+\[
+    \boxed{
+    \left\{
+        \begin{pmatrix}
+            a & b\\
+            b & a
+        \end{pmatrix}
+        \;\middle|\;
+        a^2-b^2=1
+    \right\}
+    \cup
+    \left\{
+        \begin{pmatrix}
+            a & b\\
+            -b & -a
+        \end{pmatrix}
+        \;\middle|\;
+        b^2-a^2=1
+    \right\}.
+    }
+\]

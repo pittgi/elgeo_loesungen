@@ -1,0 +1,92 @@
+\begin{exercise}{10.1}{?}
+    Welche Matrizen von $\operatorname{GL}(2; \mathbb C)$ liefern Automorphismen
+    von $\mathbb P^1 \mathbb C$, die den unendlichen fernen Punkt alias die Gerade
+    durch $(1,0)$ festhalten?
+\end{exercise}
+
+Sei $A \in \operatorname{GL}(2;\mathbb C)$ ein solcher Automorphismus. Dann 
+muss gelten für alle $\lambda \in \mathbb C^\times$:
+\[
+    A\begin{pmatrix} \lambda \\ 0 \end{pmatrix} =
+    \begin{pmatrix}
+        a & b \\
+        c & d
+    \end{pmatrix} \begin{pmatrix} \lambda \\ 0 \end{pmatrix}
+    =
+    \begin{pmatrix} \lambda a \\ \lambda c \end{pmatrix}
+    \in \mathbb C \begin{pmatrix} 1 \\ 0 \end{pmatrix}
+    \quad \Longrightarrow \quad c = 0 \quad \text{und} \quad a \neq 0.
+\]
+Da $A \in \operatorname{GL}(2;\mathbb C)$ gilt
+\[
+    \det(A) = ad \neq 0 \quad \Longrightarrow \quad a,d \neq 0.
+\]
+Somit sind die gesuchten Matrizen Elemente der Menge
+\[
+    \boxed{\Bigl\{
+        \begin{pmatrix}
+            a & b \\
+            0 & d
+        \end{pmatrix} \mid a,d \in \mathbb C^\times, b \in \mathbb C
+    \Bigr\}.}
+\]
+
+\begin{exercise}{10.2}{?}
+    Welche Matrizen von $\operatorname{SL}(2; \mathbb R)$ liefern eine Kongruenz
+    der oberen Halbebene, die die Halbgerade $\{3+iy \mid y \geq 4\}$ auf die
+    Halbgerade $\{iy \mid y \geq 1\}$ abbilden?
+\end{exercise}
+
+Sei enstprechende Matrix mit zugehöriger Möbiustransformation
+\[
+    A=
+    \begin{pmatrix}
+        a & b\\
+        c & d
+    \end{pmatrix}
+    \in \operatorname{SL}(2;\mathbb R) \qquad \text{und} \qquad
+    f_A(z)=\frac{az+b}{cz+d}.
+\]
+Beide Halbgeraden laufen für \(y\rightarrow\infty\) gegen den unendlich fernen Punkt \(\infty\).
+Da Möbiustransformationen den Rand der oberen Halbebene auf sich
+abbilden und die erste Halbgerade auf die zweite abgebildet werden soll,
+gilt daher \(f_A(\infty)=\infty\).
+Für \(f_A(z)\) ist dies genau dann der Fall, wenn \(c=0\).
+Zusätzlich gilt \(d = \frac1a\), weil \(\det(A) = ad = 1\) laut Definition.
+Somit hat \(A\) die Form
+\[
+    A=
+    \begin{pmatrix}
+        a & b\\
+        0 & \frac1a
+    \end{pmatrix}.
+\]
+
+Der endliche Endpunkt \(3+4i\) der ersten Halbgeraden muss auf den
+endlichen Endpunkt \(i\) der zweiten Halbgeraden abgebildet werden.
+Also gilt \(f_A(3+4i)=i\).
+Damit erhalten wir
+\[
+    f_A(3+4i)=\frac{a(3+4i)+b}{\frac{1}{a}}=3a^2+ab+4ia^2=i.
+\]
+Untersuchen wir Real- und Imaginäteil folgt
+\[
+    4ia^2 = i \quad
+    \Longleftrightarrow \quad a^2 = \frac{1}{4} \quad
+    \Longleftrightarrow \quad a = \frac{1}{2}, \quad \text{und}
+\]
+\[
+    3a^2+ab = 0 \quad 
+    \Longleftrightarrow \frac{3}{4}+\frac{b}{2} = 0 \quad
+    \Longleftrightarrow b = -\frac{3}{2}.
+\]
+Nach Satz 2.5.9 sind die gesuchten Matrizen daher genau
+\[
+    \boxed{
+        \pm
+        \begin{pmatrix}
+            \frac12 & -\frac32\\
+            0 & 2
+        \end{pmatrix}.
+    }
+\]

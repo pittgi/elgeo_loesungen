@@ -10,6 +10,79 @@ Da $g$ das Skalarprodukt und damit die Norm erhält, muss gelten
 \]
 Aus der Gleichung folgt jedoch $\lambda=\sqrt{2}$. Damit ist $\lambda \notin \mathbb Q$ und haben wir einen Widerspruch. Somit gibt es kein Element aus $O(2, \mathbb Q)$ welches $A$ in $B$ überführt. Es folgt die Behauptung.
 
+\begin{exercise}{2.3}{4 (ChatGPT-Alternative zu 2.1)}
+    Man zeige, dass die Gruppe
+    \[
+        K
+        :=
+        \left\{
+            x\mapsto Ax+b
+            \;\middle|\;
+            A\in O(2,\mathbb Q),\ b\in\mathbb Q^2
+        \right\}
+    \]
+    der affinen Isometrien von \(\mathbb Q^2\) bezüglich des
+    Standardskalarprodukts keine \(\mathbb Q\)-Kongruenzgruppe ist.
+\end{exercise}
+
+Betrachte die beiden Halbgeraden
+\[
+    H_1:=\mathbb Q_{\geq 0}(1,1)
+    \qquad\text{und}\qquad
+    H_2:=\mathbb Q_{\geq 0}(1,0).
+\]
+Wir zeigen, dass es kein \(k\in K\) mit
+\[
+    k(H_1)=H_2
+\]
+gibt.
+
+Jedes \(k\in K\) hat die Gestalt
+\[
+    k(x)=Ax+b
+\]
+mit
+\[
+    A\in O(2,\mathbb Q)
+    \qquad\text{und}\qquad
+    b\in\mathbb Q^2.
+\]
+Da \(0\) der Endpunkt sowohl von \(H_1\) als auch von \(H_2\) ist,
+folgt aus \(k(H_1)=H_2\), dass
+\[
+    k(0)=0.
+\]
+Somit ist \(b=0\).
+
+Da \(A\) die Halbgerade \(H_1\) auf \(H_2\) abbildet, gibt es ein
+\(\lambda\in\mathbb Q_{>0}\) mit
+\[
+    A(1,1)=\lambda(1,0).
+\]
+Da \(A\) orthogonal ist, erhält \(A\) das Standardskalarprodukt und
+insbesondere die quadrierte Länge. Daher gilt
+\[
+    2
+    =
+    \|(1,1)\|^2
+    =
+    \|A(1,1)\|^2
+    =
+    \|\lambda(1,0)\|^2
+    =
+    \lambda^2.
+\]
+Also müsste
+\[
+    \lambda=\sqrt2
+\]
+gelten. Dies ist ein Widerspruch zu \(\lambda\in\mathbb Q\).
+
+Folglich gibt es kein Element von \(K\), das \(H_1\) auf \(H_2\)
+abbildet. Insbesondere ist die für eine Kongruenzgruppe geforderte
+Transitivität auf Halbgeraden nicht erfüllt. Somit ist \(K\)
+keine \(\mathbb Q\)-Kongruenzgruppe.
+
 \begin{comment}
 \begin{exercise}{2.2}{1}
     Gegeben ein dreidimensionaler reeller Vektorraum $E$ erklären wir

@@ -1,0 +1,80 @@
+\begin{exercise}{9.1}{4}
+    Sei $E$ eine reelle affine Ebene. Man finde alle Kollineationen $\mathbb V E \tilde{\to}
+    \mathbb V E$ die die unendlich ferne Gerade punktweise festhalten. Man begründe, warum
+    es keine anderen geben kann.
+\end{exercise}
+
+Jede solche Kollineation bildet insbesondere
+\(\mathbb P\vec E\) bijektiv auf sich selbst ab und schränkt daher zu
+einer Kollineation \(\varphi:E\to E\)ein. Nach LA1 3.3.1 sind dies genau die bijektiven affinen Abbildungen,
+also die Affinitäten von \(E\).
+
+Nach Wahl eines Ursprungs können wir eine solche Affinität in der Form
+\[
+    \varphi(x)=Lx+b \quad \text{mit} \quad L\in\operatorname{GL}(\vec E), \quad b\in\vec E
+\]
+schreiben.
+
+Sei nun \(g=p+\mathbb R\vec v\) eine affine Gerade. Ihre projektive Vervollständigung ist \(g\sqcup\{[\vec v]\}\).
+Da die unendlich ferne Gerade punktweise festgehalten wird, muss der
+unendlich ferne Punkt \([\vec v]\) unter der Kollineation fest bleiben.
+Daher hat die Bildgerade \(\varphi(g)\) dieselbe Richtung wie \(g\).
+
+Da
+\[
+    \varphi(p+t\vec v)
+    =
+    Lp+tL\vec v +b,
+\]
+hat \(\varphi(g)\) den Richtungsraum \(\mathbb R L\vec v\).
+Somit muss für jedes \(\vec v\neq0\) gelten
+\[
+    \mathbb R L\vec v=\mathbb R\vec v.
+\]
+Der lineare Anteil \(L\) stabilisiert also jeden eindimensionalen
+Untervektorraum von \(\vec E\).
+
+Wir zeigen, dass daraus \(L=\lambda\operatorname{id}_{\vec E} \)
+für ein \(\lambda\in\mathbb R^\times\) folgt. Wähle eine Basis
+\[
+    e_1=(1,0),
+    \qquad
+    e_2=(0,1).
+\]
+Da die Räume \(\mathbb Re_1\) und \(\mathbb Re_2\)
+stabilisiert werden, gibt es \(\lambda,\mu\in\mathbb R^\times\) mit
+\[
+    Le_1=\lambda e_1,
+    \qquad
+    Le_2=\mu e_2.
+\]
+Da auch \(\mathbb R(e_1+e_2)\)
+stabilisiert wird, muss \(L(e_1+e_2)=\lambda e_1+\mu e_2\)
+ein Vielfaches von \(e_1+e_2\) sein. Daher gilt
+\[
+    \lambda=\mu \quad \Longrightarrow \quad L=\lambda\operatorname{id}_{\vec E}.
+\]
+mit \(\lambda\neq0\).
+
+Umgekehrt hat jede Affinität der Form
+\[
+    \varphi(x)=\lambda x+b,
+    \qquad
+    \lambda\in\mathbb R^\times,
+    \quad
+    b\in\vec E,
+\]
+die gewünschte Eigenschaft, denn \(\mathbb R(\lambda\vec v)=\mathbb R\vec v\)
+für jeden \(\vec v\neq0\). Sie hält also jeden unendlich fernen Punkt
+fest.
+
+Damit sind die gesuchten Kollineationen genau die Affinitäten
+\[
+    \boxed{
+        \varphi(x)=\lambda x+b,
+        \qquad
+        \lambda\in\mathbb R^\times,
+        \quad
+        b\in\vec E.
+    }
+\]

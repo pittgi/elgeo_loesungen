@@ -107,6 +107,50 @@ Der Fall \(\beta=\beta'\) folgt analog durch Vertauschen der Rollen von
     \boxed{\text{SSS lässt sich mithilfe vom Cosinussatz und SWS (diesem Satz) genau so beweisen!}}
 \]
 
+\begin{exercise}{4.3}{3}
+    (\textbf{Winkelsumme in konvexen Vielecken}). Man zeige: Seien in einer
+    Kongruenzebene $E$ paarweise verschiedene Punkte $p_1, ... , p_n$ mit $n \geq 3$ und
+    in $\mathbb Z/n\mathbb Z$ verstandenen Indizes gegeben derart, dass die halboffenen Segmente
+    $[p_{i-1}, p_i)$ paarweise disjunkt sind und $(p_{i+1} - pi, p_{i-1} - p_i)$ für alle $i$ linear unabhängig sind und als angeordnete Basen alle zu derselben Orientierung von $\vec{E}$
+    gehören. So gilt in der Überlagerung $\tilde{\mathbb W}$ der Winkelgruppe
+    \[
+        \sum_{i=1}^{n}\angle (p_{i+1}-p_i, p_{i-1}-p_) = (n-2) 180^\circ
+    \]
+    Man zeige durch ein Beispiel, dass die Orientierungsbedingung notwendig ist.
+\end{exercise}
+
+Sei $\phi_i = \angle (p_{i+1}-p_i, p_{i-1}-p_i)$ der Innenwinkel und $\varphi_i$ der Au\ss enwinkel bei $p_i$.
+Es gilt:
+\[
+    \varphi_i = 180^\circ - \phi_i \quad \text{,also auch} \quad \phi_i = 180^\circ - \varphi_i \quad \text{für alle } i = 1, ..., n.
+\]
+Wegen der Orientierungsbedingung erfolgen alle Richtungsänderungen beim
+Umlaufen des Vielecks im gleichen Drehsinn. Nach einem vollständigen Umlauf
+hat sich die Richtung insgesamt um \(360^\circ\) gedreht.
+Wir wissen daher
+\[
+    \sum_{i=1}^{n} \varphi_i = 360^\circ.
+\]
+Also gilt:
+\[
+    \sum_{i=1}^{n}\phi_i = \sum_{i=1}^{n}( 180^\circ - \varphi_i) = \sum_{i=1}^{n}180^\circ - \sum_{i=1}^{n} \varphi_i = n \cdot 180^\circ - 360^\circ = (n-2) 180^\circ.
+\]
+
+\begin{minipage}{0.69\linewidth}
+    Beweis, dass die Orientierung wichtig ist:
+
+    Wähle $E = \mathbb R^2$ mit
+    \[
+        p_1 = (0,1), p_2 = (-1, -1), p_3 = (0, 0) \quad \text{und} \quad p_4 = (1, -1).
+    \]
+    Somit sind alle Vorraussetzungen au\ss er die Orientierung erfüllt.
+    Nach $\angle (p_{i+1}-p_i, p_{i-1}-p_i)$ erhalten wir die Winkel \(53.1^\circ + 18.4^\circ + 18.4^\circ + 90^\circ = 180^\circ \neq (n-2)180^\circ = 360^\circ\)
+\end{minipage}
+\begin{minipage}{0.3\linewidth}
+    \input{tikz/431.tex}
+\end{minipage}
+
+
 \begin{exercise}{4.4}{3}
     Man zeige die Formel für den Flächeninhalt eines Dreiecks einer Kongruenzebene in der Gestalt
     \[

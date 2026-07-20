@@ -1,0 +1,50 @@
+\begin{center}
+        \begin{tikzpicture}[
+        scale=1,
+        point/.style={circle, fill, inner sep=1.5pt}
+    ]
+
+    % Punkte
+    \coordinate (P1) at (0,1);
+    \coordinate (P2) at (-1,-1);
+    \coordinate (P3) at (0,0);
+    \coordinate (P4) at (1,-1);
+
+    % Dreieck
+    \draw[thick]
+        (P1) -- 
+        (P2) --
+        (P3) --
+        (P4) --
+        cycle;
+
+    % Punkte markieren
+    \node[point, label=above:$p_1$] at (P1) {};
+    \node[point, label=below left:$p_2$] at (P2) {};
+    \node[point, label=below:$p_3$] at (P3) {};
+    \node[point, label=below right:$p_4$] at (P4) {};
+
+    % Winkel
+    \pic[
+        draw,
+        angle radius=4mm,
+        angle eccentricity=1.4,
+    ] {angle=P3--P2--P1};
+    \pic[
+        draw,
+        angle radius=2mm,
+        angle eccentricity=1.4,
+    ] {angle=P2--P3--P4};
+    \pic[
+        draw,
+        angle radius=3mm,
+        angle eccentricity=1.4,
+    ] {angle=P2--P1--P4};
+    \pic[
+        draw,
+        angle radius=4mm,
+        angle eccentricity=1.4,
+    ] {angle=P1--P4--P3};
+            
+    \end{tikzpicture}
+\end{center}

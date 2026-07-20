@@ -69,6 +69,9 @@ Also folgt
     so brauchen unsere angeordneten Dreiecke nicht kongruent zu sein.
 \end{exercise}
 
+\[
+    \boxed{\text{Dreieckswinkel liegen im Intervall } (0, \pi) \quad \Longrightarrow \quad \text{Cos ist eindeutig, Sin nicht!}}
+\]
 Nach dem Kosinussatz gilt
 \[
     c^2=a^2+b^2-2ab\cos\gamma \qquad \text{und} \qquad
@@ -99,3 +102,29 @@ Die beiden Dreiecke besitzen also dieselben Werte für \(a\), \(b\) und
 
 Der Fall \(\beta=\beta'\) folgt analog durch Vertauschen der Rollen von
 \(a,\alpha\) und \(b,\beta\).
+
+\[
+    \boxed{\text{SSS lässt sich mithilfe vom Cosinussatz und SWS (diesem Satz) genau so beweisen!}}
+\]
+
+\begin{exercise}{4.4}{3}
+    Man zeige die Formel für den Flächeninhalt eines Dreiecks einer Kongruenzebene in der Gestalt
+    \[
+        \sin(\alpha)bc = \pm F(B-A,C-A)
+    \]    
+    mit unserem orientierten Flächeninhalt auf der rechten Seite.
+\end{exercise}
+
+Schreibe $v:=B-A$ und $w:= C-A$, also $|v| = c$ und $|w| = b$. Zerlege $v$ in $v = v^+ + v^-$, wobei $v^+$ ein skalares Vielfaches von $w$ und $v^-$ senkrecht auf $w$ ist.
+Nach dem Satz des Pythagoras haben wir also ein rechtwinkliges Dreieck $|v|^2 = |v^+|^2 + |v^-|^2$ konstruiert und wissen $|v^-| = |v| \cdot \sin(\alpha) = c \cdot \sin(\alpha)$.
+
+Nun wähle eine Orientierung auf dem Richtungsraum, sodass $F$ positiv ist.
+Dann gilt:
+\[
+    F(v,w)=F(v^++v^-,w) = F(v^+, w) + F(v^-, w) \overset{\star}{=} F(v^-, w) \qquad ({\scriptstyle\star}: v^+ =  \lambda w).
+\]
+Weiter gilt:
+\[
+    |F(v^-,w)| = \|v^-\|\cdot \|w\|= c \sin(\alpha) \cdot b = \sin(\alpha)bc.
+\]
+Es folgt die Behauptung.

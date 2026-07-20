@@ -52,3 +52,50 @@ Betrachtet man analog nun die Höhe $h'$ auf der Seite $a$, dann kann $h'$ im Dr
 Also folgt
 \[ \frac{\operatorname{sin}\beta}{b} = \frac{\operatorname{sin}\gamma}{c}.\]
 
+\begin{exercise}{4.2}{3}
+    Man zeige: Je zwei angeordnete Dreiecke
+    \((A,B,C)\) und \((A',B',C')\)
+    einer Kongruenzebene mit zwei gleichen Seitenlängen
+    \(a=a'\) sowie \(b=b'\)
+    und gleichem eingeschlossenen Winkel
+    \(
+        \gamma=\gamma'
+    \)
+    sind angeordnet kongruent.
+    Gilt statt \(\gamma=\gamma'\) eine der Gleichheiten
+    \(
+        \alpha=\alpha'\) oder \(\beta=\beta',
+    \)
+    so brauchen unsere angeordneten Dreiecke nicht kongruent zu sein.
+\end{exercise}
+
+Nach dem Kosinussatz gilt
+\[
+    c^2=a^2+b^2-2ab\cos\gamma \qquad \text{und} \qquad
+    (c')^2=(a')^2+(b')^2-2a'b'\cos\gamma'.
+\]
+Aus \(a=a', b=b', \gamma=\gamma'\)
+folgt daher \(c^2=(c')^2.\)
+Da Seitenlängen positiv sind, gilt \(c=c'\). Somit stimmen alle drei
+entsprechenden Seitenlängen überein, und nach dem Kongruenzsatz SSS sind
+die beiden angeordneten Dreiecke angeordnet kongruent.
+
+Dass die Behauptung bei \(\alpha=\alpha'\) im Allgemeinen nicht gilt,
+zeigt der Sinussatz. Wähle
+\[
+    a=1,\qquad b=\sqrt3,\qquad \alpha=30^\circ.
+\]
+Dann gilt
+\[
+    \sin\beta
+    =
+    \frac{b}{a}\sin\alpha
+    =
+    \frac{\sqrt3}{2}.
+\]
+Daher sind sowohl \(\beta_1=60^\circ\) als auch \(\beta_2=120^\circ\) möglich.
+Die beiden Dreiecke besitzen also dieselben Werte für \(a\), \(b\) und
+\(\alpha\), sind aber wegen \(\beta_1\neq \beta_2\) nicht kongruent.
+
+Der Fall \(\beta=\beta'\) folgt analog durch Vertauschen der Rollen von
+\(a,\alpha\) und \(b,\beta\).

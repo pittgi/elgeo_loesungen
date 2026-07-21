@@ -43,6 +43,109 @@ Damit ist das Bild des Einheitskreises die erweiterte Gerade
 \sqcup \{\infty\}.}
 \]
 
+\begin{exercise}{6.2}{3}
+    Man betrachte einen dreidimensionalen reellen affinen Raum $R$ mit
+    Skalarprodukt auf seinem Richtungsraum $\vec{R}$ und seine Erweiterung durch einen
+    weiteren Punkt $\infty$ zu
+    \[
+    \widehat{R} := R \sqcup \{\infty\}.
+    \]
+    Man erkläre verallgemeinerte Sphären $L \subset \widehat{R}$ als Teilmengen, die entweder echte
+    Sphären in $R$ sind, also von der Gestalt
+    \[
+    L = K(c;r) := \{x \in R \mid \|x-c\| = r\}
+    \]
+    für $c \in R$ und $r \in \mathbb{R}_{>0}$, oder eine affine Ebene $E \subset R$ disjunkt vereinigt mit der
+    einpunktigen Menge $\{\infty\}$. Im ersten Fall sprechen wir von einer \textbf{echten Sphäre}.
+    Im zweiten Fall sprechen wir von einer \textbf{erweiterten Ebene} und verwenden dafür
+    die Notation $L = \widehat{E} := E \sqcup \{\infty\}$. Man definiert für jede verallgemeinerte Sphäre
+    $L$ die Inversion
+    \[
+    s_L \colon \widehat{R} \xrightarrow{\sim} \widehat{R}
+    \]
+    durch dieselbe Formel wie im Falle einer Kreisspiegelung. Man zeige nun: Das Bild
+    unter $s_L$ einer verallgemeinerten Sphäre ist wieder eine verallgemeinerte Sphäre.
+\end{exercise}
+
+\textbf{Fall 1}: $L$ ist erweiterte Gerade. Dann ist $s_L$ die übliche Spiegelung an der Ebene mit Zusatzvorschrift $\infty \mapsto \infty$.
+Dann ist klar, dass verallgemeinerte Sphären auf verallgemeinerte Sphären abgebildet werden.
+
+\textbf{Fall 2}: $L$ ist eine echte Sphäre $K(c;r)$. Sei o.B.d.A. $c = 0$, da Translationen verallgemeinerte Sphären erhalten.
+Jede echte Sphäre oder affine Ebene lässt sich durch eine Gleichung der Form
+\[
+    a\|x\|^2+\langle u,x\rangle+b=0
+\]
+beschreiben.
+
+Für eine echte Sphäre \(K(c;\rho)\) gilt nämlich
+\begin{align*}
+    \|x-c\|^2&=\rho^2\\
+    \Longleftrightarrow \langle x-c, x-c\rangle &= \rho^2\\
+    \Longleftrightarrow \langle x, x \rangle - \langle x, c \rangle - \langle c, x \rangle + \langle c, c \rangle &= \rho^2\\
+    \Longleftrightarrow \|x\|^2-2\langle c,x\rangle+\|c\|^2-\rho^2&=0.
+\end{align*}
+Und eine affine Ebene besitzt eine Gleichung
+\[
+    \langle u,x\rangle+b=0,
+\]
+also ebenfalls eine Gleichung obiger Form, hier mit \(a=0\).
+
+
+Wir definieren nun
+\[
+    y := s_L(x) = \frac{r^2}{\|x\|^2}x.
+\]
+Da die Sphärenspiegelung zu sich selbst invers ist, gilt \(x = \frac{r^2}{\|y\|^2}\)y, also
+\[
+    \|x\|^2 = \frac{r^4}{\|y\|^4}\|y\|^2=\frac{r^4}{\|y\|^2}.
+\]
+
+Setzen wir dies in \(a\|x\|^2+\langle u,x\rangle+b=0\)
+ein, so erhalten wir
+\begin{align*}
+    0
+    &=
+    a\frac{r^4}{\|y\|^2}
+    +
+    \left\langle
+        u,
+        \frac{r^2}{\|y\|^2}y
+    \right\rangle
+    +b\\
+    &=
+    \frac{ar^4}{\|y\|^2}
+    +
+    \frac{r^2}{\|y\|^2}\langle u,y\rangle
+    +b.
+\end{align*}
+Multiplikation mit \(\|y\|^2\) liefert
+\[
+    b\|y\|^2+r^2\langle u,y\rangle+ar^4=0.
+\]
+
+Dies ist wieder eine Gleichung derselben Form.
+
+Ist \(b=0\), so lautet die Gleichung
+\[
+    r^2\langle u,y\rangle+ar^4=0.
+\]
+Dies ist die Gleichung einer affinen Ebene. Da in diesem Fall die ursprüngliche
+verallgemeinerte Sphäre durch das Inversionszentrum \(0\) geht und die Inversion
+\(0\) mit \(\infty\) vertauscht, ist das Bild eine erweiterte Ebene.
+
+Ist dagegen \(b\neq0\), so können wir durch \(b\) teilen und erhalten
+\[
+    \|y\|^2+\frac{r^2}{b}\langle u,y\rangle+\frac{ar^4}{b}=0.
+\]
+Durch quadratische Ergänzung lässt sich diese Gleichung in die Form
+\[
+    \|y-c'\|^2=(\rho')^2
+\]
+bringen. Das Bild ist also eine echte Sphäre.
+
+Damit wird jede verallgemeinerte Sphäre unter \(s_L\) wieder auf eine
+verallgemeinerte Sphäre abgebildet.
+
 \newpage
 \begin{exercise}{6.3}{4}
     Wir betrachten den Einheitskreis $S^1$ in der Ebene $\mathbb R^2$ und stellen darauf bei $p := (0, 1)$ eine Lampe.

@@ -13,11 +13,41 @@ $\Longrightarrow:$ Vorraussetzungen wie im Aufabentext. Seien $v \in A, w \in B$
     &= cos\angle (A,B).
 \end{align*}
 
-$\Longleftarrow:$ Vorraussetzungen wie im Aufgabentext. Wähle $a, b \in A$ ungleich null, sodass $a, b$ orthogonal stehen und gleiche Länge besitzen.
-Wähle $a', b' \in A'$ analog und mit gleicher Orientierung wie $a, b$.
-Sei $\psi$ eine Abbildung definiert durch $a \mapsto a'$, $b \mapsto b'$ und ihre lineare Fortsetzung.
-Konstruktionsbedingt erhält diese Abbildung die Skalarproduktstruktur zwischen $Z$ und $Z'$ bis auf einen globalen Skalierungsfaktor.
-Also ist $\psi$ ein drehspiegelverträglicher Isomorphismus. Da $\psi(A) = A'$ folgt $\psi(B) = B'$.
+$\Longleftarrow:$ Es gelte
+    \(
+        \angle(A,B)=\angle(A',B')
+    \).
+    Wähle \(a\in A\setminus\{0\}\) und ergänze \(a\) zu einer
+    orthogonalen Basis \((a,c)\) von \(Z\). Ebenso wähle
+    \(a'\in A'\setminus\{0\}\) und ergänze \(a'\) zu einer
+    orthogonalen Basis \((a',c')\) von \(Z'\), wobei die Längenverhältnisse
+    der beiden Basen übereinstimmen.
+
+    Die Orientierung von \((a',c')\) wählen wir so, dass der bezüglich
+    \(A'\) unter demselben Winkel wie \(B\) zu \(A\) liegende Strahl
+    gerade \(B'\) ist.
+
+    Definiere nun \(\psi:Z\to Z'\) durch
+    \[
+        \psi(a)=a',
+        \qquad
+        \psi(c)=c'
+    \]
+    und lineare Fortsetzung. Konstruktionsbedingt erhält \(\psi\) die
+    Skalarproduktstruktur bis auf einen globalen Skalierungsfaktor und ist
+    daher ein drehspiegelverträglicher Isomorphismus.
+
+    Da \(a\in A\) und \(a'\in A'\), gilt
+    \(
+        \psi(A)=A'
+    \).
+    Wegen der Gleichheit der Winkel und der gewählten Orientierung gilt
+    au\ss erdem
+    \(
+        \psi(B)=B'
+    \).
+    Damit existiert ein drehspiegelverträglicher Isomorphismus mit den
+    verlangten Eigenschaften.
 
 \begin{exercise}{3.3}{4}
     Man berechne den Arcuscosinus des Winkels, den zwei Flächen eines

@@ -79,6 +79,70 @@ Damit sind die gesuchten Kollineationen genau die Affinitäten
     }
 \]
 
-%\begin{exercise}{9.3}{4}
-%    
-%\end{exercise}
+\begin{exercise}{9.3}{4}
+    Gegeben ein Vektorraum \(V\) und im projektiven Raum \(\mathbb P V\) zwei
+    projektive Hyperebenen \(U,H\subset\mathbb P V\) sowie ein Punkt \(q\in \mathbb P V\setminus(H\cup U)\)
+    im Komplement ihrer Vereinigung induziert unsere Projektion eine Bijektion
+    \[
+        \xi_{q,H}\colon U\xrightarrow{\sim}H.
+    \]
+\end{exercise}
+
+Für einen Punkt \(u\in U\) sei \(\xi_{q,H}(u)\)
+der Schnittpunkt der projektiven Geraden durch \(q\) und \(u\) mit der
+projektiven Hyperebene \(H\).
+
+Jede projektive Gerade, die nicht vollständig in einer vorgegebenen
+projektiven Hyperebene liegt, schneidet diese in genau einem Punkt.
+Da \(q\notin H\cup U\),
+liegt keine projektive Gerade durch \(q\) vollständig in \(H\) oder \(U\).
+Daher schneidet jede projektive Gerade durch \(q\) sowohl \(H\) als auch
+\(U\) in jeweils genau einem Punkt.
+
+Somit ist neben
+\[
+    \xi_{q,H}\colon U\to H
+\]
+auch die Projektion
+\[
+    \xi_{q,U}\colon H\to U
+\]
+wohldefiniert.
+
+Sei nun \(u\in U\) und
+\[
+    h:=\xi_{q,H}(u).
+\]
+Dann liegen \(q\), \(u\) und \(h\) auf derselben projektiven Geraden.
+Projiziert man \(h\) von \(q\) zurück auf \(U\), so betrachtet man daher
+dieselbe projektive Gerade. Da diese \(U\) in genau einem Punkt schneidet
+und \(u\) auf ihr liegt, gilt
+\[
+    \xi_{q,U}(h)=u.
+\]
+Folglich ist
+\[
+    \xi_{q,U}\circ\xi_{q,H}
+    =
+    \operatorname{id}_U.
+\]
+
+Analog gilt für jedes \(h\in H\)
+\[
+    \xi_{q,H}\circ\xi_{q,U}
+    =
+    \operatorname{id}_H.
+\]
+Somit sind
+\[
+    \xi_{q,H}
+    \qquad\text{und}\qquad
+    \xi_{q,U}
+\]
+zueinander invers. Daher ist
+\[
+    \boxed{
+        \xi_{q,H}\colon U\xrightarrow{\sim}H
+    }
+\]
+eine Bijektion.

@@ -19,3 +19,124 @@ Fallunterscheidungen:
     \end{enumerate}
     \item $p=\infty$ oder $q=\infty$: Sei o.B.d.A. $p = \infty$. Nehme als $\ell$ die zu $p$ senkrechte Gerade und erweitere sie mit $\infty$, um $\hat{\ell} =: L$ zu erhalten. Diese Lösung ist eindeutig.
 \end{enumerate}
+
+\begin{exercise}{7.3}{3}
+    Gegeben eine euklidische Ebene \(E\) und eine offene Halbebene
+    \(H \subset E\) ist die Einschränkung von Möbiustransformationen eine Injektion
+    \[
+        \operatorname{Möb}_H(\widehat E)
+        \hookrightarrow
+        \operatorname{Ens}^{\times}(H).
+    \]
+\end{exercise}
+
+Sei
+\[
+    R:\operatorname{Möb}_H(\widehat E)
+    \longrightarrow
+    \operatorname{Ens}^{\times}(H)
+\]
+die Einschränkungsabbildung und sei
+\[
+    \varphi\in\ker(R).
+\]
+Dann gilt
+\[
+    \varphi|_H=\operatorname{id}_H.
+\]
+
+Wähle einen echten Kreis \(L\), der vollständig in \(H\) enthalten ist.
+Dann wird \(L\) von \(\varphi\) punktweise festgehalten. Nach der
+Charakterisierung der Kreisspiegelungen gilt daher
+\[
+    \varphi\in\{\operatorname{id}_{\widehat E},s_L\}.
+\]
+
+Wähle nun einen Punkt \(x\in H\setminus L\). Wegen
+\(\varphi|_H=\operatorname{id}_H\) gilt
+\[
+    \varphi(x)=x.
+\]
+Da aber die Kreisspiegelung \(s_L\) außerhalb von \(L\) keine Punkte
+festhält, kann \(\varphi\neq s_L\) gelten. Folglich ist
+\[
+    \varphi=\operatorname{id}_{\widehat E}.
+\]
+Damit ist
+\[
+    \ker(R)=\{\operatorname{id}_{\widehat E}\},
+\]
+also ist \(R\) injektiv.
+
+\begin{exercise}{7.4}{3}
+    Man zeige: Gegeben eine euklidische Ebene \(E\) und eine Gerade
+    \(g \subset E\) und dazu eine offene Halbebene \(H \subset E\) ist die
+    Einschränkung von Möbiustransformationen eine Injektion
+    \[
+        \operatorname{Möb}_H(\widehat E)
+        \hookrightarrow
+        \operatorname{Ens}^{\times}(\widehat g).
+    \]
+\end{exercise}
+
+Sei
+\[
+    R:
+    \operatorname{Möb}_H(\widehat E)
+    \longrightarrow
+    \operatorname{Ens}^{\times}(\widehat g)
+\]
+die Einschränkungsabbildung und sei
+\[
+    \varphi\in\ker(R).
+\]
+Dann gilt
+\[
+    \varphi|_{\widehat g}
+    =
+    \operatorname{id}_{\widehat g}.
+\]
+Also hält \(\varphi\) die verallgemeinerte Gerade \(\widehat g\)
+punktweise fest.
+
+Nach der Charakterisierung von Möbiustransformationen, die einen
+verallgemeinerten Kreis punktweise festhalten, gilt daher
+\[
+    \varphi
+    \in
+    \left\{
+        \operatorname{id}_{\widehat E},
+        s_{\widehat g}
+    \right\}.
+\]
+
+Die Spiegelung \(s_{\widehat g}\) vertauscht jedoch die beiden von
+\(g\) begrenzten offenen Halbebenen. Insbesondere gilt
+\[
+    s_{\widehat g}(H)\neq H.
+\]
+Da aber
+\[
+    \varphi\in\operatorname{Möb}_H(\widehat E)
+\]
+und somit
+\[
+    \varphi(H)=H
+\]
+gilt, kann nicht
+\[
+    \varphi=s_{\widehat g}
+\]
+sein. Folglich ist
+\[
+    \varphi=\operatorname{id}_{\widehat E}.
+\]
+Damit gilt
+\[
+    \ker(R)
+    =
+    \left\{
+        \operatorname{id}_{\widehat E}
+    \right\},
+\]
+und somit ist \(R\) injektiv.

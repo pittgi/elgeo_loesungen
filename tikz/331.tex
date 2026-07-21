@@ -6,6 +6,7 @@
     \coordinate (V2) at (-1,-1,1);
     \coordinate (V3) at (-1,1,-1);
     \coordinate (V4) at (1,-1,-1);
+    \coordinate (M) at (1, 0, 0);
 
     % Flächen
     \filldraw[fill=blue!10, draw=black, opacity=0.7] (V1) -- (V2) -- (V3) -- cycle;
@@ -13,10 +14,21 @@
     \filldraw[fill=green!10, draw=black, opacity=0.7] (V1) -- (V3) -- (V4) -- cycle;
     \filldraw[fill=yellow!15, draw=black, opacity=0.7] (V2) -- (V3) -- (V4) -- cycle;
 
+    \draw[thick, red!40] (M) -- (V3);
+    \draw[thick, red!40] (M) -- (V2);
+
+    \pic[
+        draw,
+        angle radius=8mm,
+        angle eccentricity=1.2,
+        red!40
+    ] {angle=V3--M--V2};
+
     % Punkte
-    \fill (V1) circle (0.8pt) node[above right] {$V_1$};
-    \fill (V2) circle (0.8pt) node[below left] {$V_2$};
-    \fill (V3) circle (0.8pt) node[above left] {$V_3$};
-    \fill (V4) circle (0.8pt) node[below right] {$V_4$};
+    \fill (V1) circle (0.8pt) node[above right] {$A$};
+    \fill (V2) circle (0.8pt) node[below left] {$D$};
+    \fill (V3) circle (0.8pt) node[above left] {$C$};
+    \fill (V4) circle (0.8pt) node[below right] {$B$};
+    \fill (M) circle (0.8pt) node[right] {$M$};
 
 \end{tikzpicture}

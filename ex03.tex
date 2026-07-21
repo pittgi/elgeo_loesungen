@@ -30,23 +30,31 @@ Also ist $\psi$ ein drehspiegelverträglicher Isomorphismus. Da $\psi(A) = A'$ f
     \input{tikz/331.tex}
 \end{minipage}
 \begin{minipage}{0.5\linewidth}
-Das Tetraeder in $\mathbb R^3$ eingebettet sei gegeben durch seine Ecken
-\begin{align*}
-    V_1 = (1,1,1)&, \quad V_2 = (-1,-1,1),\\
-    V_3 = (-1, 1, -1)& \quad \text{und} \quad V_4 = (1, -1, -1).
-\end{align*}
-\end{minipage}
-Bestimme die normierten Normalvektoren der Flächen $(V_1, V_2, V_3)$ und $(V_1, V_2, V_4)$:
-\begin{align*}
-    v_{12}=V_2 - V_1= (-2,-2-0)&, \quad v_{13}=V_3 -V_1 = (-2, 0, -2)\\
-    v_{12}\times v_{13}= (4, -4, -4),& \quad \text{normiert} \quad n_1 = \frac{1}{\sqrt{3}}(1, -1, -1)  \quad \text{und}\\
-    v_{14}=(0, -2, -2), \quad v_{14}\times v_{12} &= (-4, 4, -4), \quad \text{normiert} \quad n_2 = \frac{1}{\sqrt{3}}(1, -1, 1)
-\end{align*}
-Der Winkel $\theta$ zwischen den beiden Flächen ist gleich dem Winkel zwischen
-ihren Normalenvektoren $n_1$ und $n_2$. Da wir normierte Vektoren haben, rechnen wir:
+
+Wir betrachten das regelmä\ss ige Tetraeder $ABCD$ mit Kantenlänge $a$.
+Nun berechnen wir den Winkel zwischen $ABC$ und $ABD$.
+Sei $M$ der Mittelpunkt der Kante $AB$.
+In dem gleichschenkligen Dreieck $ABC$ und $ABD$ sind $CM$ und $CD$ jeweils die Höhen auf die Seite $AB$.
+Also stehen beide senkrecht auf $AB$.
+Der Winkel der Flächen ist daher:
 \[
-\operatorname{cos} \theta = \frac{\langle n_1, n_2\rangle}{\left\|n_1\right\|\cdot \left\|n_2\right\|}=\frac{1}{3}\langle (1, -1, -1), (1, -1, 1)\rangle=\frac{1}{3} \quad \Longrightarrow \quad \boxed{\theta = \operatorname{arccos}\frac{1}{3}}
+    \angle CMD = \angle (ABC, ABD).
 \]
+Nun kennt man die Längen im Dreieck $CMD$:
+$CD = a$ und wegen der Höhe im gleichseitigem Dreick $CM = DM = \frac{\sqrt{3}}{2}a$.
+
+
+\end{minipage}
+Mithilfe des Kosinussatzes berechnen wir:
+\begin{align*}
+    a^2 &= \left(\frac{\sqrt{3}}{2}a\right)^2 + \left(\frac{\sqrt{3}}{2}a\right)^2 - 2\left(\frac{\sqrt{3}}{2}a\right)^2\cos (\angle CMD) \\
+    &= \left(\frac{3}{4}a^2\right)2 - 2\left(\frac{3}{4}a^2\right)\cos (\angle CMD)\\
+    &= \frac{3}{2}a^2 - \frac{3}{2}a^2\cos (\angle CMD)\\
+    \Longleftrightarrow 1 &= \frac{3}{2} - \frac{3}{2}\cos (\angle CMD)\\
+    \Longleftrightarrow \frac{1}{2} &= \frac{3}{2}\cos (\angle CMD)\\
+    \Longleftrightarrow \frac{1}{3} &= \cos (\angle CMD)\\
+    \Longleftrightarrow \angle CMD &= \boxed{\operatorname{arccos}\frac{1}{3} = \angle (ABC, ABD)}.
+\end{align*}
 
 \begin{exercise}{3.4}{4}
     Gegeben seien vier von Null verschiedene Vektoren in einem dreidimensionalen Skalarproduktraum, von denen jeweils zwei einen Winkel $>90^{\circ}$

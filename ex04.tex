@@ -111,10 +111,10 @@ Der Fall \(\beta=\beta'\) folgt analog durch Vertauschen der Rollen von
     (\textbf{Winkelsumme in konvexen Vielecken}). Man zeige: Seien in einer
     Kongruenzebene $E$ paarweise verschiedene Punkte $p_1, ... , p_n$ mit $n \geq 3$ und
     in $\mathbb Z/n\mathbb Z$ verstandenen Indizes gegeben derart, dass die halboffenen Segmente
-    $[p_{i-1}, p_i)$ paarweise disjunkt sind und $(p_{i+1} - pi, p_{i-1} - p_i)$ für alle $i$ linear unabhängig sind und als angeordnete Basen alle zu derselben Orientierung von $\vec{E}$
+    $[p_{i-1}, p_i)$ paarweise disjunkt sind und $(p_{i+1} - p_i, p_{i-1} - p_i)$ für alle $i$ linear unabhängig sind und als angeordnete Basen alle zu derselben Orientierung von $\vec{E}$
     gehören. So gilt in der Überlagerung $\tilde{\mathbb W}$ der Winkelgruppe
     \[
-        \sum_{i=1}^{n}\angle (p_{i+1}-p_i, p_{i-1}-p_) = (n-2) 180^\circ
+        \sum_{i=1}^{n}\angle (p_{i+1}-p_i, p_{i-1}-p_i) = (n-2) 180^\circ
     \]
     Man zeige durch ein Beispiel, dass die Orientierungsbedingung notwendig ist.
 \end{exercise}
@@ -161,8 +161,6 @@ Also gilt:
 
 Schreibe $v:=B-A$ und $w:= C-A$, also $|v| = c$ und $|w| = b$. Zerlege $v$ in $v = v^+ + v^-$, wobei $v^+$ ein skalares Vielfaches von $w$ und $v^-$ senkrecht auf $w$ ist.
 Nach dem Satz des Pythagoras haben wir also ein rechtwinkliges Dreieck $|v|^2 = |v^+|^2 + |v^-|^2$ konstruiert und wissen $|v^-| = |v| \cdot \sin(\alpha) = c \cdot \sin(\alpha)$.
-
-Nun wähle eine Orientierung auf dem Richtungsraum, sodass $F$ positiv ist.
 Dann gilt:
 \[
     F(v,w)=F(v^++v^-,w) = F(v^+, w) + F(v^-, w) \overset{\star}{=} F(v^-, w) \qquad ({\scriptstyle\star}: v^+ =  \lambda w).
